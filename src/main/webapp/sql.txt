@@ -11,3 +11,18 @@ INSERT INTO `t_school` VALUES (3, '新东方', '0731-9624551', '天心区', NULL
 INSERT INTO `t_pro` VALUES (1, 1, '我的名字', '张三');
 INSERT INTO `t_pro` VALUES (2, 1, '我的身份', '学生');
 
+添加角色功能对应关系数据
+INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (1, 8, 1);
+INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (2, 9, 1);
+INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (3, 10, 1);
+INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (4, 11, 1);
+INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (5, 13, 3);
+INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (6, 14, 4);
+INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (7, 1, 5);
+INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (8, 2, 5);
+INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (9, 3, 5);
+INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (10, 4, 5);
+INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (11, 5, 5);
+INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (12, 6, 5);
+INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (13, 7, 6);
+INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (14, 12, 6);
