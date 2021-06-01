@@ -5,3 +5,8 @@
 INSERT INTO `t_school` VALUES (1, '虹猫', '0573-8704521', '岳麓区', NULL, 2);
 INSERT INTO `t_school` VALUES (2, '北大青鸟', '0741-888888', '芙蓉区', NULL, 0);
 INSERT INTO `t_school` VALUES (3, '新东方', '0731-9624551', '天心区', NULL, 0);
+
+
+添加问题表的数据
+INSERT INTO `t_pro` VALUES (1, 1, '我的名字', '张三');
+INSERT INTO `t_pro` VALUES (2, 1, '我的身份', '学生');
