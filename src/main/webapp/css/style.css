@@ -1,0 +1,451 @@
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background-color: #BEE7E9 ;
+}
+
+
+
+a {
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #09101f;
+}
+
+a:hover, a:focus {
+  color: #d31531;
+  text-decoration: none;
+}
+
+button {
+  outline: 0 !important;
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  color: #6e727f;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+i {
+  line-height: normal;
+}
+
+.d-table {
+  width: 100%;
+  height: 100%;
+}
+
+.d-table-cell {
+  vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.ptb-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+.pt-70 {
+  padding-top: 70px;
+}
+
+.pb-70 {
+  padding-bottom: 70px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #09101f;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+}
+
+.h1:last-child, .h2:last-child, .h3:last-child, .h4:last-child, .h5:last-child, .h6:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
+  margin-bottom: 0;
+}
+
+/*================================================
+Default btn CSS
+=================================================*/
+.default-btn {
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: #d31531;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.default-btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #ff4545;
+  z-index: -1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.default-btn:hover {
+  color: #ffffff;
+}
+
+.default-btn:hover::before {
+  height: 100%;
+}
+
+
+/*================================================
+My Account Area CSS
+=================================================*/
+.login-form {
+  padding: 35px;
+  border-radius: 5px;
+  background-color: #f9f7fc;
+  max-width: 650px;
+  margin: auto;
+}
+
+.login-form h2 {
+  margin-bottom: 30px;
+  font-size: 25px;
+  border-bottom: 1px solid #dedddf;
+  padding-bottom: 15px;
+  font-weight: 600;
+  position: relative;
+}
+
+.login-form h2::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid #d31531;
+  height: 100%;
+  width: 100px;
+}
+
+.login-form form .form-group {
+  margin-bottom: 25px;
+}
+
+.login-form form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #6e727f;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.login-form form .form-group .form-control {
+  height: 50px;
+  padding: 0 0 0 15px;
+  line-height: initial;
+  color: #09101f;
+  background-color: #ffffff !important;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.login-form form .form-group .form-control:focus {
+  border: 1px solid #d31531;
+  background-color: transparent !important;
+}
+
+.login-form form .form-group .form-control:focus::-webkit-input-placeholder {
+  color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.login-form form .form-group .form-control:focus:-ms-input-placeholder {
+  color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.login-form form .form-group .form-control:focus::-ms-input-placeholder {
+  color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.login-form form .form-group .form-control:focus::placeholder {
+  color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.login-form form .lost-your-password {
+  text-align: right;
+}
+
+.login-form form .lost-your-password a {
+  display: inline-block;
+  position: relative;
+  font-weight: 500;
+  font-size: 15px;
+  color: #6e727f;
+}
+
+.login-form form .lost-your-password a::before {
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #eeeeee;
+}
+
+.login-form form .lost-your-password a::after {
+  width: 0;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  bottom: 0;
+  content: '';
+  background-color: #ff4545;
+}
+
+.login-form form .lost-your-password a:hover::before {
+  width: 0;
+}
+
+.login-form form .lost-your-password a:hover::after {
+  width: 100%;
+}
+
+.login-form form button {
+  border: none;
+  margin-top: 25px;
+  padding: 15px 30px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #d31531;
+  color: #ffffff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.login-form form button:hover {
+  background-color: #ff4545;
+}
+
+.login-form.mb-30 {
+  margin-bottom: 30px;
+}
+
+
+.register-form {
+  padding: 35px;
+  border-radius: 5px;
+  background-color: #f9f7fc;
+  max-width: 650px;
+  margin: auto;
+}
+
+.register-form h2 {
+  margin-bottom: 30px;
+  font-size: 25px;
+  border-bottom: 1px solid #dedddf;
+  padding-bottom: 15px;
+  font-weight: 600;
+  position: relative;
+}
+
+.register-form h2::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid #d31531;
+  height: 100%;
+  width: 100px;
+}
+
+.register-form form .form-group {
+  margin-bottom: 25px;
+}
+
+.register-form form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #6e727f;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.register-form form .form-group .form-control {
+  height: 50px;
+  padding: 0 0 0 15px;
+  line-height: initial;
+  color: #09101f;
+  background-color: #ffffff !important;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.register-form form .form-group .form-control:focus {
+  border: 1px solid #d31531;
+  background-color: transparent !important;
+}
+
+.register-form form .form-group .form-control:focus::-webkit-input-placeholder {
+  color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.register-form form .form-group .form-control:focus:-ms-input-placeholder {
+  color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.register-form form .form-group .form-control:focus::-ms-input-placeholder {
+  color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.register-form form .form-group .form-control:focus::placeholder {
+  color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.register-form form button {
+  border: none;
+  padding: 15px 30px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #d31531;
+  color: #ffffff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.register-form form button:hover {
+  background-color: #ff4545;
+}
+.container{
+  margin: 30% auto;
+}
+
+.forgotPwd-form {
+  padding: 35px;
+  border-radius: 5px;
+  background-color: #f9f7fc;
+  max-width: 650px;
+  margin: auto;
+}
+
+.forgotPwd-form h2 {
+  margin-bottom: 30px;
+  font-size: 25px;
+  border-bottom: 1px solid #dedddf;
+  padding-bottom: 15px;
+  font-weight: 600;
+  position: relative;
+}
+
+.forgotPwd-form h2::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid #d31531;
+  height: 100%;
+  width: 100px;
+}
+
+.forgotPwd-form  .form-group .form-control {
+  height: 50px;
+  padding: 0 0 0 15px;
+  line-height: initial;
+  color: #09101f;
+  background-color: #ffffff !important;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.forgotPwd-form form .form-group .form-control:focus {
+  border: 1px solid #d31531;
+  background-color: transparent !important;
+}
+
+.forgotPwd-form form .form-group .form-control:focus::-webkit-input-placeholder {
+  color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.forgotPwd-form button {
+  border: none;
+  padding: 15px 30px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #d31531;
+  color: #ffffff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+

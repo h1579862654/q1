@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>登陆</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery_3.5.1.js"></script>
+	<script src="js/myJs.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6 col-md-12">
+			<div class="login-form mb-30">
+				<h2>登陆</h2>
+				<form>
+					<div class="form-group">
+						<label>手机号码</label>
+						<input type="text" class="form-control" id="phone">
+						<span id="ts_phone" style="color: #F53994;"></span>
+					</div>
+					<div class="form-group">
+						<label>密码</label>
+						<input type="password" class="form-control" id="pass">
+						<span id="ts_pass" style="color: #F53994;"></span>
+					</div>
+
+					<div class="row align-items-center ">
+						<div class="col-lg-6 col-md-6 col-sm-6 lost-your-password">
+							<a href="register.html" style="float: left;">立即注册</a>
+							<a href="forgotPwd.html" class="lost-your-password">忘记密码?</a>
+						</div>
+					</div>
+					<button id="lg">登陆</button>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#lg").click(function() {
+			console.log("点击!")
+			var phone = $("#phone").val().trim(); //获取提交的值
+
+			//进行判断，如果获取的值为0那么提示账号不能为空
+			if (phone.length == 0) {
+				$("#ts_phone").html("请输入手机号码");
+				return false;
+			}
+
+
+			//密码进行验证不能为空
+			var pass = $("#pass").val().trim(); //获取提交的密码的值
+			if (pass.length == 0) {
+				$("#ts_pass").html("请输入密码");
+				return false;
+			}
+
+			$.ajax({
+				url: "lg",
+				method:'post',
+				data: {
+					phone: phone,
+					pass: pass
+				},
+				success: function(da) {
+					//请求成功自动调用的方法
+					console.log("da:" + da);
+					if (da == "true") {
+						location.href = "index.jsp";
+					} else {
+						$("#ts_pass").html("用户名或密码错误");
+					}
+
+				}
+			})
+			//防止重复点击
+			jingz("lg");
+
+			console.log("点击54622")
+		});
+	});
+
+
+
+
+</script>
+</html>
