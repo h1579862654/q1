@@ -1,0 +1,14 @@
+
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: 1579862654h
+    url: jdbc:mysql://localhost:3306/school2101?useSSL=false&serverTimezone=Hongkong&characterEncoding=utf-8&autoReconnect=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+#  mapper-locations: classpath:com/mapper/*.xml
+  type-aliases-package: com.pojo
