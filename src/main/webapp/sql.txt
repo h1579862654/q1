@@ -10,3 +10,4 @@ INSERT INTO `t_school` VALUES (3, '新东方', '0731-9624551', '天心区', NULL
 添加问题表的数据
 INSERT INTO `t_pro` VALUES (1, 1, '我的名字', '张三');
 INSERT INTO `t_pro` VALUES (2, 1, '我的身份', '学生');
+

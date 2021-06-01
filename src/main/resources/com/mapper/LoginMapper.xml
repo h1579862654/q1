@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.LoginMapper">
+
+
+<select id="getUserByPhone" resultType="user" parameterType="String">
+    select * from T_USER where PHONE = #{phone}
+</select>
+
+<select id="getUser" parameterType="user" resultType="user">
+    select * from T_USER where PHONE = #{phone}
+    and pass = #{pass} and STATE != 1
+</select>
+
+<insert id="regUser" parameterType="user" >
+<selectKey resultType="int" keyProperty="id"  order="AFTER">
+    SELECT LAST_INSERT_ID()
+</selectKey>
+    INSERT into T_USER (phone,pass)
+    values(#{phone},#{pass})
+</insert>
+<insert id="regUserRole" parameterType="user" >
+    insert into T_USER_ROLE (uuid,rid)values (#{id},1)
+</insert>
+
+<delete id="delUserRole" parameterType="user" >
+    delete T_USER_ROLE where id =#{id}
+</delete>
+
+<select id="selALLTPro" parameterType="user" resultType="tpro">
+    Select T_pro.id,PNAME,UUID from T_pro inner join T_USER
+    on T_USER.id = T_pro.uuid where phone = #{phone}
+</select>
+
+<select id="getUserByPro" parameterType="tpro" resultType="user">
+   	Select u.*  from T_USER u inner join T_pro t on u.id = t.uuid
+   	where t.id = #{id} and t.pname =#{pname} and t.pswer = #{pswer}
+</select>
+
+</mapper>
