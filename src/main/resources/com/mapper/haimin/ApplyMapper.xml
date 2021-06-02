@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件-->
+<!--namespace名称空间-->
+<mapper namespace="com.mapper.haimin.ApplyMapper">
+	<update id="refuseApply">
+	UPDATE t_apply SET lasttime=#{time},state=#{state} WHERE id=#{key}
+	</update>
+<!--	UPDATE   t_apply SET lasttime=#{time},state=3 WHERE id=#{key}-->
+	<update id="refuseApplying">
+	UPDATE
+		<if test="type == 1">
+			t_school SET state=#{state} WHERE id=#{iid}
+		</if>
+		<if test="type == 2">
+			t_student SET state=#{state} WHERE id=#{iid}
+		</if>
+		<if test="type == 3">
+			t_emp SET state=#{state} WHERE id=#{iid}
+		</if>
+		<if test="type == 4">
+			t_emp SET state=#{state} WHERE id=#{iid}
+		</if>
+	</update>
+    <select id="queryApply" resultType="TApply">
+        SELECT
+	t_user.`name`,
+	t_user.phone,
+	t_apply.type,
+	t_apply.iid,
+	t_apply.note,
+	t_apply.snote,
+	t_apply.starttime,
+	t_apply.lasttime,
+	t_apply.state,
+	t_apply.id
+FROM
+	t_apply
+	INNER JOIN t_user ON t_apply.uuid = t_user.id
+    </select>
+
+
+
+</mapper>
