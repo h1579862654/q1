@@ -10,6 +10,7 @@ INSERT INTO `t_school` VALUES (3, '新东方', '0731-9624551', '天心区', NULL
 添加问题表的数据
 INSERT INTO `t_pro` VALUES (1, 1, '我的名字', '张三');
 INSERT INTO `t_pro` VALUES (2, 1, '我的身份', '学生');
+启动->login.html测试
 
 添加角色功能对应关系数据
 INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (1, 8, 1);
@@ -26,3 +27,9 @@ INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (11, 5, 5);
 INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (12, 6, 5);
 INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (13, 7, 6);
 INSERT INTO `t_role_fun`(`id`, `fid`, `rid`) VALUES (14, 12, 6);
+
+测试审核的数据
+INSERT INTO `t_apply`(`id`, `uuid`, `type`, `iid`, `note`, `snote`, `starttime`, `lasttime`, `state`) VALUES (1, 1, 1, 1, '申请备注', '审批备注', '2021-05-31 11:31:03', NULL, 2);
+INSERT INTO `t_apply`(`id`, `uuid`, `type`, `iid`, `note`, `snote`, `starttime`, `lasttime`, `state`) VALUES (2, 2, 2, 2, '申请备注', '审批备注', '2021-05-19 12:02:43', NULL, 2);
+测试页面 apply.jsp
+
