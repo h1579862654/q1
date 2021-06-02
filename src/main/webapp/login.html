@@ -4,14 +4,14 @@
 	<meta charset="utf-8">
 	<title>登陆</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/jquery_3.5.1.js"></script>
-	<script src="js/myJs.js"></script>
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<script src="/js/jquery_3.5.1.js"></script>
+	<script src="/js/myJs.js"></script>
 </head>
 <body>
 
-<div class="container">
+<div class="container xia">
 	<div class="row">
 		<div class="col-lg-6 col-md-12">
 			<div class="login-form mb-30">
@@ -63,7 +63,7 @@
 			}
 
 			$.ajax({
-				url: "lg",
+				url: "login/lg",
 				method:'post',
 				data: {
 					phone: phone,
@@ -73,7 +73,7 @@
 					//请求成功自动调用的方法
 					console.log("da:" + da);
 					if (da == "true") {
-						location.href = "index.jsp";
+						location.href = "login/gn";
 					} else {
 						$("#ts_pass").html("用户名或密码错误");
 					}
@@ -82,7 +82,6 @@
 			})
 			//防止重复点击
 			jingz("lg");
-
 			console.log("点击54622")
 		});
 	});

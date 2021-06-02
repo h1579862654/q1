@@ -4,10 +4,8 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  background-color: #BEE7E9 ;
+  /*background-color: #BEE7E9 ;*/
 }
-
-
 
 a {
   text-decoration: none;
@@ -449,3 +447,67 @@ My Account Area CSS
   transition: 0.5s;
 }
 
+
+.index-form {
+  padding: 25px;
+  border-radius: 5px;
+  background-color: #f9f7fc;
+  max-width: 650px;
+  margin: auto;
+}
+
+
+.circleImg{
+  border-radius: 30px;
+  width:60px;
+  height:60px;
+  float: left;
+}
+
+
+.index-form ul {
+  margin: 30px auto;
+}
+.index-form li {
+  list-style: none;
+  flex: 40% 0 0;
+  margin: 0px auto;
+  margin-bottom: 10px;
+
+}
+.index-form a {
+  background-color: #F1B0B7;
+  padding: 0;
+  text-align: center;
+  padding: 5px 0;
+
+}
+
+.index-form h4 {
+  color: #fff
+}
+
+.index-form .xx * {
+  vertical-align: middle;
+}
+
+.index-form .xx {
+  padding: 10px 10px;
+
+}
+
+.index-form .xx label {
+  padding: 0px 10px;
+
+}
+
+.index-form .xx .h {
+  font-family: "仿宋";
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.index-form .xx .m {
+  font-family: "黑体";
+  opacity: 0.6;
+}

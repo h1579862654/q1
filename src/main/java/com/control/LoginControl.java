@@ -1,6 +1,7 @@
 package com.control;
 
 import com.alibaba.fastjson.JSONObject;
+import com.pojo.TFun;
 import com.pojo.TPro;
 import com.pojo.User;
 import com.service.Ilogin;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -19,10 +21,29 @@ import java.util.List;
  * @create: 2021-05-28 11:38
  **/
 @Controller
+@RequestMapping("login")
 public class LoginControl {
     @Autowired
     Ilogin ig;
 
+    @RequestMapping("gn")
+    public String loginGn(HttpServletRequest request){
+        System.out.println("LoginControl->gn");
+        Object o = request.getSession().getAttribute("user");
+        if(o==null){
+            return "/login.html";
+        }
+        User u = (User)o;
+        List<TFun> fs = ig.getFunsByUser(u);
+        System.out.println("-------"+fs);
+        request.setAttribute("funs",fs);
+        return "/index.jsp";
+    }
+    /**
+     * 登陆
+     * @param
+     * @return
+     */
     @RequestMapping("lg")
     @ResponseBody
     public String login(User u, HttpSession hs){
@@ -36,6 +57,13 @@ public class LoginControl {
         }
         return "false";
     }
+
+    /**
+     * 注册
+     * @param u
+     * @return
+     */
+
     @RequestMapping("reg")
     @ResponseBody
     public String reg(User u){
@@ -88,14 +116,7 @@ public class LoginControl {
 
 
     }
-    @RequestMapping("aaa")
-    public String aaa(){
-        List<User> allUser = ig.getAllUser();
-        for (User user : allUser) {
-            System.out.println(user);
-        }
-        return "login.html";
-    }
+
 
     @RequestMapping("getpass")
     @ResponseBody

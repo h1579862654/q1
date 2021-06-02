@@ -1,12 +1,12 @@
 package com.service.impl;
 
 import com.mapper.LoginMapper;
+import com.pojo.TFun;
 import com.pojo.TPro;
 import com.pojo.User;
 import com.service.Ilogin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 /**
@@ -82,6 +82,11 @@ public class LoginService implements Ilogin {
         User u = lm.getUserByPro(t);
         System.out.println("找到的用户"+u);
         return u;
+    }
+
+    @Override
+    public List<TFun> getFunsByUser(User u) {
+        return lm.getFunsByUser(u);
     }
 
 }

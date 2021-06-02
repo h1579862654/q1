@@ -1,5 +1,6 @@
 package com.service;
 
+import com.pojo.TFun;
 import com.pojo.TPro;
 import com.pojo.User;
 
@@ -60,4 +61,11 @@ public interface Ilogin {
      * 查询找回密码的账户
      */
     User getUserByPro(TPro t);
+
+
+    /**
+     * 查询用户功能
+     */
+    List<TFun> getFunsByUser(User u);
+
 }

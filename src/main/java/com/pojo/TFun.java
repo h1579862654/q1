@@ -3,9 +3,10 @@ package com.pojo;
 
 public class TFun {
 
-  private long id;
+  private int id;
   private String name;
   private String url;
+
 
   @Override
   public String toString() {
@@ -16,14 +17,13 @@ public class TFun {
             '}';
   }
 
-  public long getId() {
+  public int getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(int id) {
     this.id = id;
   }
-
 
   public String getName() {
     return name;
@@ -33,7 +33,6 @@ public class TFun {
     this.name = name;
   }
 
-
   public String getUrl() {
     return url;
   }
@@ -41,5 +40,4 @@ public class TFun {
   public void setUrl(String url) {
     this.url = url;
   }
-
 }

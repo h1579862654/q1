@@ -4,6 +4,18 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mapper.LoginMapper">
 
+<select id="getFunsByUser" resultType="tfun" parameterType="user">
+    SELECT
+	f.*
+FROM
+	T_user u
+	JOIN t_user_role ur ON u.id = ur.uuid
+	JOIN t_role_fun rf ON ur.rid = rf.rid
+	JOIN t_fun f ON f.id = rf.fid
+WHERE
+	u.id = #{id}
+
+</select>
 
 <select id="getUserByPhone" resultType="user" parameterType="String">
     select * from T_USER where PHONE = #{phone}
@@ -22,7 +34,7 @@
     values(#{phone},#{pass})
 </insert>
 <insert id="regUserRole" parameterType="user" >
-    insert into T_USER_ROLE (uuid,rid)values (#{id},1)
+    insert into T_USER_ROLE (uuid,rid)values (#{id},5)
 </insert>
 
 <delete id="delUserRole" parameterType="user" >

@@ -1,5 +1,6 @@
 package com.mapper;
 
+import com.pojo.TFun;
 import com.pojo.TPro;
 import com.pojo.User;
 import org.apache.ibatis.annotations.Select;
@@ -16,4 +17,5 @@ public interface LoginMapper {
     int delUser(User u);
     List<TPro> selALLTPro(User u);
     User getUserByPro(TPro t);
+    List<TFun> getFunsByUser(User u);
 }
