@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<style type="text/css">
+			
+			#head{
+				width: 200px;
+				margin: 50px auto;
+			}
+			#option{
+				width: 1000px;
+				margin: 50px auto;
+			}
+			#option input{
+				width: 100px;
+				margin-left: 200px;
+			}
+			#sub{
+				width: 100px;
+				margin-left: 800px;
+			}
+			.sq{
+				width: 500px;
+				margin-left: 700px;
+				display: none;
+			/* 	border: 2px solid red; */
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<div id="all">
+			<div id="head">
+				<h1>教务管理系统</h1>
+			</div>
+			<div id="option">
+			<input type="button" name="" id="school" value="学校" />
+			<input type="button" name="" id="student" value="学生" />
+			<input type="button" name="" id="jump" value="员工" />
+			</div>
+			<div id="form">
+				<form method="post">
+					<div id="sc" class="sq">
+						<h2>学校</h2><input class="sr" type="text" />
+						<br/>
+						<h2>电话</h2><input class="sr" type="text" />
+						<br/>
+						<h2>地址</h2>
+						<input class="sr" type="text" />
+						<br/>
+						<h2>官网</h2>
+						<input class="sr" type="text" />
+						<br/>
+						<h2>备注</h2>
+						<input class="sr" type="text" />
+						<br/>
+					</div>
+					<div id="st" class="sq">
+						<h2>学校</h2><input class="xs" type="text" />
+						<br/>
+						<h2>班级</h2><input class="xs" type="text" />
+						<br/>
+						<h2>备注</h2>
+						<input class="xs" type="text" />
+						<br/>
+					</div>
+					<div id="jm" class="sq">
+						<h2>学校</h2><input class="js" type="text" />
+						<br/>
+						<h2>备注</h2>
+						<input class="js" type="text" />
+						<br/>
+					</div>
+					<input type="submit" id="sub" name="提交" value="提交"/>
+				</form>
+			</div>
+			
+		</div>
+	</body>
+	<<script src="js/jquery-3.4.1.js"></script>>
+	<script type="text/javascript">
+	var sc = document.getElementById("school")
+	var st = document.getElementById("student")	
+	var jm = document.getElementById("jump")
+	sc.onclick = function(){
+		document.getElementById("sc").style.display = "block"
+		document.getElementById("st").style.display = "none"
+		document.getElementById("jm").style.display = "none"
+	}
+	st.onclick = function(){
+		document.getElementById("sc").style.display = "none"
+		document.getElementById("st").style.display = "block"
+		document.getElementById("jm").style.display = "none"
+	}
+	jm.onclick = function(){
+		document.getElementById("sc").style.display = "none"
+		document.getElementById("st").style.display = "none"
+		document.getElementById("jm").style.display = "block"
+	}
+	</script>
+</html>
